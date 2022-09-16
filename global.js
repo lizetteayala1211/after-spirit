@@ -4,6 +4,10 @@ function visitGoFundMe(){
         window.location='https://www.gofundme.com/f/to-the-family-of-channara-pheapphilly', '_blank';
     }
 
+function visitFacebook(){
+        window.location='https://www.facebook.com/for.channara', '_blank';
+    }    
+
 function Resource01(){
         window.location='https://www.gofundme.com/f/to-the-family-of-channara-pheapphilly', '_blank';
     }
