@@ -1,5 +1,5 @@
 
-/* custom font faces */
+/*** custom font faces ***/
 @font-face {
     font-family: "Club-Lithographer-V2-Italic";
     src: url("./assets/fonts/ClubLithographerV2-Italic.otf");
@@ -35,6 +35,7 @@ body {
 }
 
 /*** LANDING PAGE ***/
+
 
 /* overall content */
 .all-content-container {
@@ -265,6 +266,8 @@ body {
 	font-family: "Club-Lithographer-V2-Italic";
 }
 
+
+
 /*** RESOURCES PAGE ***/
 
 .resources-wrapper-container {
@@ -451,6 +454,8 @@ body {
 	font-style: italic;
 }
 
+
+
 /*** EPHEMERA PAGE ***/
 
 .ephemera-wrapper-container {
@@ -550,6 +555,8 @@ body {
     cursor: pointer;
     font-style: italic;
 }
+
+
 
 /*** EPHEMERA (INDIVIDUAL) PAGES ***/
 
@@ -651,8 +658,6 @@ video {
 @media only screen and (min-device-width : 768px) and (max-device-width : 1023px) {
 
 
-
-
 /*** EPHEMERA (INDIVIDUAL) PAGE ***/
 
 .bottom-content-container.ephemera {
@@ -683,6 +688,10 @@ video {
 
 /* Smartphones (portrait) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+
+/*** LANDING PAGE ***/
+
 
 .all-content-container {
     display: flex;
@@ -861,6 +870,9 @@ video {
     border-radius: 25px;
     margin-top: 10px;
 }
+
+
+/*** RESOURCES PAGE ***/
 
 .resource-container {
     display: flex;
