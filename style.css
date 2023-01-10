@@ -76,6 +76,8 @@ body {
   width: 100%;
   max-height: 16%;
   max-width: 100%;	
+  right: 15px;
+  position: relative;
 }
 
 .title-img {
@@ -124,19 +126,19 @@ body {
 }
 
 .philly-img.one {
-	margin-right: 8px;
-	background-image: url('./assets/images/family/lanternBlue_02_cooking.png'); 
+  margin-right: 8px;
+  background-image: url('./assets/images/family/lanternBlue_02_cooking.png'); 
   background-position: center; 
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 
 .philly-img.two {
-	margin-left: 8px;
-	background-image: url('./assets/images/family/lanternBlue_03_smiling.png'); 
+  margin-left: 8px;
+  background-image: url('./assets/images/family/lanternBlue_03_smiling.png'); 
   background-position: center; 
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 
 .opening-text-container {
@@ -215,6 +217,17 @@ body {
 	cursor: default;
 }
 
+.navigation-link.one {
+    cursor: pointer;
+    transition: all 3s ease-in;
+    -webkit-transition: all 3s ease;
+}
+
+.navigation-link.one:hover {
+    cursor: pointer;
+    font-style: italic;
+}
+
 .navigation-link.two {
 	cursor: pointer;
 	transition: all 3s ease-in;
@@ -254,7 +267,7 @@ body {
 
 /*** RESOURCES PAGE ***/
 
-.resources-container {
+.resources-wrapper-container {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -297,11 +310,12 @@ body {
 	font-size: 18px;
 /*	overflow: hidden;*/
 	color: #00406B;
-	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-width: .5px;
   -webkit-text-stroke-color: #00406B;
-	background: rgb(255,255,255);
-	background: linear-gradient(45deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
-	height: 50%; 
+  /*	background: rgb(255,255,255);
+	background: linear-gradient(45deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);	
+*/
+  height: 50%; 
   width: 10%;
   max-height: 50%;
   max-width: 10%;
@@ -325,7 +339,7 @@ body {
 	font-size: 18px;
 /*	overflow: hidden;*/
 	color: #00406B;
-	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-width: .5px;
   -webkit-text-stroke-color: #00406B;
   background: rgb(255,255,255);
 	background: linear-gradient(45deg, rgba(255,255,255,0) 0%, rgba(183,208,247,0.5) 100%);
@@ -360,11 +374,12 @@ body {
 	align-self: center;
 /*	overflow: hidden;*/
 	color: #00406B;
+/*    background-color: black;*/
 	background: rgb(255,255,255);
 	background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 100%);
-	height: 85%; 
+	 height: 79.5%; 
   width: 100%;
-  max-height: 85%;
+  max-height: 79.5%;
   max-width: 100%;
   border-radius: 25px;
   margin-top: 10px;
@@ -436,7 +451,206 @@ body {
 	font-style: italic;
 }
 
-/* mobile menu css */
+/*** EPHEMERA PAGE ***/
+
+.ephemera-wrapper-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: center;
+/*  overflow: hidden;*/
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+  height: 100%; 
+  width: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 25px;
+}
+
+.bottom-content-container.ephemera {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: center;
+    align-self: center;
+    /* overflow: hidden; */
+    color: #00406B;
+    /* background: black; */
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 100%);
+    height: 79.5%;
+    width: 100%;
+    max-height: 79.5%;
+    max-width: 100%;
+    border-radius: 25px;
+    margin-top: 10px;
+    overflow: scroll;
+}
+
+.ephemera-row-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    /* overflow: hidden; */
+    color: #00406B;
+    /* background: black; */
+    height: 100vh;
+    width: 100%;
+    max-height: 100vh;
+    max-width: 100%;
+    border-radius: 25px;
+    /* margin-top: 10px; */
+    flex: 1 1 0;
+    flex-wrap: wrap;
+}
+
+.ephemera-square {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: flex-end;
+    align-items: flex-start;
+    align-self: flex-start;
+    /* overflow: hidden; */
+    color: #00406B;
+    /* background: black; */
+    background: rgb(255,255,255);
+    background: linear-gradient(45deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+    height: 35vh;
+    width: 65vw;
+    max-height: 35vh;
+    max-width: 65vh;
+    border-radius: 25px;
+    /* margin-top: 10px; */
+    cursor: pointer;
+}
+
+.ephemera-link {
+    font-family: "Canela-Thin";
+    color: #00406B;
+/*    -webkit-text-stroke-width: .25px;
+  -webkit-text-stroke-color: #00406B;*/
+    margin-left: 25px;
+    margin-bottom: 25px;
+    cursor: default;
+}
+
+.ephemera-link:hover {
+    font-family: "Canela-Thin";
+    color: #00406B;
+/*    -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-color: #00406B;*/
+    margin-left: 25px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    font-style: italic;
+}
+
+/*** EPHEMERA (INDIVIDUAL) PAGES ***/
+
+.bottom-content-container.ephemera.individual-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: center;
+    align-self: center;
+    /* overflow: hidden; */
+    color: #00406B;
+    /* background: black; */
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 100%);
+    height: 79.5%;
+    width: 100%;
+    max-height: 79.5%;
+    max-width: 100%;
+    border-radius: 25px;
+    margin-top: 10px;
+    overflow: hidden !important;
+}
+
+.ephemera-square.information {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    align-self: flex-start;
+    /* overflow: hidden; */
+    color: #00406B;
+    background: transparent;
+    /* background: rgb(255,255,255); */
+    /* background: linear-gradient(45deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); */
+    height: 100vh;
+    width: 35vw;
+    max-height: 100vh;
+    max-width: 35vw;
+     border-radius: 0px; 
+    /* margin-top: 10px; */
+    cursor: pointer;
+    font-family: "Degular-Light";
+}
+
+.ephemera-square.media {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: flex-end;
+    align-items: flex-start;
+    align-self: flex-start;
+    /* overflow: hidden; */
+    color: #00406B;
+    /* background: black; */
+    background: rgb(255,255,255);
+    background: linear-gradient(45deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+    height: 65vh;
+    width: 55vw;
+    max-height: 65vh;
+    max-width: 55vw;
+    border-radius: 25px;
+    /* margin-top: 10px; */
+    cursor: pointer;
+}
+
+.ephemera-info {
+    width: 20%;
+}
+
+.ephemera-info.secondary {
+    width: 70%;
+}
+
+video {
+  height: auto;
+  width: 100%;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: calc(var(--aspect-ratio, .5625) * 100%);
+  height: 100%;
+  width: 100%;
+/*  object-fit: contain;*/
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+
+
+
+/*** mobile menu css ****/
 @media screen and (max-width: 600px) {
 
 .all-content-container {
@@ -550,10 +764,10 @@ body {
     font-size: 18px;
     /* overflow: hidden; */
     color: #00406B;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: .5px;
     -webkit-text-stroke-color: #00406B;
-    background: rgb(255,255,255);
-    background: linear-gradient(45deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+/*    background: rgb(255,255,255);
+    background: linear-gradient(45deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);*/
     height: 50%;
     width: 30%;
     max-height: 50%;
@@ -578,7 +792,7 @@ body {
     font-size: 18px;
     /* overflow: hidden; */
     color: #00406B;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: .5px;
     -webkit-text-stroke-color: #00406B;
     background: rgb(255,255,255);
     background: linear-gradient(45deg, rgba(255,255,255,0) 0%, rgba(183,208,247,0.5) 100%);
@@ -654,11 +868,169 @@ body {
     font-family: "Degular-Light";
 }
 
+/*** EPHEMERA PAGE ***/
 
+.bottom-content-container.ephemera {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: center;
+    align-self: center;
+    /* overflow: hidden; */
+    color: #00406B;
+    /* background: black; */
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 100%);
+    height: 79.5%;
+    width: 100%;
+    max-height: 79.5%;
+    max-width: 100%;
+    border-radius: 25px;
+    margin-top: 10px;
+    overflow: scroll;
+}
 
+.ephemera-row-container.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    /* overflow: hidden; */
+    color: #00406B;
+    /* background: black; */
+    height: 100vh;
+    width: 100%;
+    max-height: 100vh;
+    max-width: 100%;
+    border-radius: 25px;
+    /* margin-top: 10px; */
+    flex: 1 1 0;
+    flex-wrap: wrap;
+}
 
+.ephemera-square {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: flex-end;
+    align-items: flex-start;
+    align-self: flex-start;
+    /* overflow: hidden; */
+    color: #00406B;
+    /* background: black; */
+    background: rgb(255,255,255);
+    background: linear-gradient(45deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+    height: 35vh;
+    width: 42vw;
+    max-height: 35vh;
+    max-width: 40vh;
+    border-radius: 25px;
+    /* margin-top: 10px; */
+    cursor: pointer;
+}
 
+.ephemera-link {
+    font-family: "Canela-Thin";
+    color: #00406B;
+    margin-left: 25px;
+    margin-bottom: 25px;
+    cursor: default;
+    width: 70%;
+}
 
+/*** EPHEMERA (INDIVIDUAL) PAGE ***/
+
+.bottom-content-container.ephemera.individual-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: center;
+    align-self: center;
+    /* overflow: hidden; */
+    color: #00406B;
+    /* background: black; */
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 100%);
+    height: 79.5%;
+    width: 100%;
+    max-height: 79.5%;
+    max-width: 100%;
+    border-radius: 25px;
+    margin-top: 10px;
+    overflow: scroll;
+}
+
+.ephemera-row-container.individual-page {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-content: flex-start !important;
+    align-items: flex-start !important;
+    align-self: flex-start !important;
+    /* overflow: hidden; */
+    color: #00406B;
+    /* background: black; */
+    height: 100vh;
+    width: 100%;
+    max-height: 100vh;
+    max-width: 100%;
+    border-radius: 25px;
+    /* margin-top: 10px; */
+    flex: 1 1 0;
+    flex-wrap: wrap;
+}
+
+.ephemera-square.information {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    align-content: flex-start;
+    align-items: flex-start;
+    align-self: flex-start;
+    /* overflow: hidden; */
+    color: #00406B;
+    background: transparent;
+    /* background: rgb(255,255,255); */
+    /* background: linear-gradient(45deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); */
+    height: auto;
+    width: 80% !important;
+    max-height: none;
+    max-width: 80% !important;
+    border-radius: 0px;
+    /* margin-top: 10px; */
+    cursor: pointer;
+    font-family: "Degular-Light";
+    padding: 0px;
+    margin: 0px;
+}
+
+.ephemera-info {
+    width: 20%;
+}
+
+.ephemera-info.secondary {
+    width: 100vw;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: calc(var(--aspect-ratio, .5625) * 100%);
+/*    height: 0;*/
+    width: 100%;
+    /* object-fit: contain; */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
 
 
 
