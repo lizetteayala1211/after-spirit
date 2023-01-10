@@ -493,15 +493,15 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-content: center;
+    align-content: flex-start;
     align-items: center;
     align-self: center;
     /* overflow: hidden; */
     color: #00406B;
     /* background: black; */
-    height: 100vh;
+    height: 100%;
     width: 100%;
-    max-height: 100vh;
+    max-height: 100%;
     max-width: 100%;
     border-radius: 25px;
     /* margin-top: 10px; */
@@ -647,11 +647,42 @@ video {
   border-radius: 10px;
 }
 
+/* Tablet (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1023px) {
 
 
 
-/*** mobile menu css ****/
-@media screen and (max-width: 600px) {
+
+/*** EPHEMERA (INDIVIDUAL) PAGE ***/
+
+.bottom-content-container.ephemera {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: center;
+    align-self: center;
+    /* overflow: hidden; */
+    color: #00406B;
+    /* background: black; */
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, 
+    rgba(255,255,255,0.5) 100%);
+    height: 79.5%;
+    width: 100%;
+    max-height: 79.5%;
+    max-width: 100%;
+    border-radius: 25px;
+    margin-top: 10px;
+    overflow: scroll;
+}
+
+
+}
+
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
 .all-content-container {
     display: flex;
@@ -891,17 +922,17 @@ video {
     overflow: scroll;
 }
 
-.ephemera-row-container.main {
+.ephemera-row-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse !important;
     justify-content: center;
-    align-content: center;
+    align-content: flex-start;
     align-items: center;
     align-self: center;
     /* overflow: hidden; */
     color: #00406B;
     /* background: black; */
-    height: 100vh;
+    height: auto;
     width: 100%;
     max-height: 100vh;
     max-width: 100%;
@@ -911,26 +942,6 @@ video {
     flex-wrap: wrap;
 }
 
-.ephemera-square {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-content: flex-end;
-    align-items: flex-start;
-    align-self: flex-start;
-    /* overflow: hidden; */
-    color: #00406B;
-    /* background: black; */
-    background: rgb(255,255,255);
-    background: linear-gradient(45deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
-    height: 35vh;
-    width: 42vw;
-    max-height: 35vh;
-    max-width: 40vh;
-    border-radius: 25px;
-    /* margin-top: 10px; */
-    cursor: pointer;
-}
 
 .ephemera-link {
     font-family: "Canela-Thin";
@@ -966,7 +977,7 @@ video {
 
 .ephemera-row-container.individual-page {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row-reverse !important;
     justify-content: center;
     align-content: flex-start !important;
     align-items: flex-start !important;
@@ -1005,7 +1016,7 @@ video {
     cursor: pointer;
     font-family: "Degular-Light";
     padding: 0px;
-    margin: 0px;
+    margin-bottom: 30px;
 }
 
 .ephemera-info {
@@ -1014,6 +1025,27 @@ video {
 
 .ephemera-info.secondary {
     width: 100vw;
+}
+
+.ephemera-square.media {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: flex-end;
+    align-items: flex-start;
+    align-self: flex-start;
+    /* overflow: hidden; */
+    color: #00406B;
+    /* background: black; */
+    background: rgb(255,255,255);
+    background: linear-gradient(45deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+    height: auto;
+    width: 100vw;
+    max-height: 100%;
+    max-width: 80%;
+    border-radius: 25px;
+    /* margin-top: 10px; */
+    cursor: pointer;
 }
 
 .video-container {
