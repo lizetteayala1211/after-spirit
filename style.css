@@ -659,7 +659,7 @@ video {
 }
 
 /* Trying to get the position attribute to be unset for the player object so video takes up full height */
-
+/* 
 .video-container #player {
   position: unset;
 }
@@ -668,7 +668,7 @@ video {
   position: unset;
 }
 
-/* .player player-1f719acc-f75e-4610-8c58-a1194ddfac4a js-player-fullscreen no-playbar with-sticky-custom-logo touch-support mobile player-normal player-xs {
+.player player-1f719acc-f75e-4610-8c58-a1194ddfac4a js-player-fullscreen no-playbar with-sticky-custom-logo touch-support mobile player-normal player-xs {
   position: unset;
 } */
 
@@ -801,6 +801,7 @@ video {
 }
 
 .navigation-box {
+    cursor: pointer;
     display: flex;
     overflow: hidden;
     justify-content: flex-start;
